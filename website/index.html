@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성경의 우상들 (심층 리포트)</title>
+    <!-- Google Fonts for Editorial / E-book Look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="blob-bg blob-1"></div>
+        <div class="blob-bg blob-2"></div>
+        <div class="noise-overlay"></div>
+    </div>
+
+    <!-- 좌측/상단 네비게이션 -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h1>Idols in the Bible</h1>
+            <p>심층 에세이 리포트</p>
+        </div>
+        <ul class="nav-list" id="navList">
+            <!-- JS 동적 생성 -->
+        </ul>
+    </nav>
+
+    <!-- 메인 아티클 컨텐츠 영역 -->
+    <main class="content-wrapper">
+        <div class="mobile-nav-toggle" id="mobileNavToggle">
+            <span>☰ 목차 보기</span>
+        </div>
+        
+        <article class="article-container" id="articleContainer">
+            <div class="intro-placeholder">
+                <h2 class="playfair">The History of Human Desire</h2>
+                <p>좌측의 목차를 클릭하여 각 시대별 우상에 투영된<br>역사적 팩트와 인간 심리의 심층 분석을 확인해 보세요.</p>
+            </div>
+            <!-- JS 동적 렌더링 영역 (마크다운 파싱 흉내) -->
+        </article>
+    </main>
+
+    <!-- Markdown 파싱을 위한 marked.js 라이브러리 추가 -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

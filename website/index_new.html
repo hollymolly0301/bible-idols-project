@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Augen Pro — 성경의 우상들 (심층 에세이 리포트)</title>
+    <!-- Google Fonts: Inter for the ultimate high-tech PP Neue Montreal feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles_new.css">
+</head>
+<body>
+    <!-- Sticky Top Navigation Bar -->
+    <header class="top-nav">
+        <div class="nav-container">
+            <div class="brand">
+                <span class="brand-title">AUGEN PRO</span>
+                <span class="brand-separator">·</span>
+                <span class="brand-subtitle">Idols in the Bible</span>
+            </div>
+            
+            <nav class="pill-nav">
+                <ul class="nav-list" id="navList">
+                    <!-- JS will dynamically populate Pill Tag Buttons here -->
+                </ul>
+            </nav>
+            
+            <div class="nav-right">
+                <button class="search-btn" id="searchBtn">
+                    <span>Quick Search</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer Trigger -->
+    <div class="mobile-menu-trigger" id="mobileMenuTrigger">
+        <span>☰ Select Chapter</span>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="drawer-header">
+            <h3>Chapters</h3>
+            <button class="close-drawer" id="closeDrawer">✕</button>
+        </div>
+        <ul class="drawer-list" id="drawerList">
+            <!-- Mobile nav items go here -->
+        </ul>
+    </div>
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-bg">
+            <img src="images/hero_profile.png" alt="Spectral glowing profile" class="hero-img">
+            <div class="hero-gradient"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">THE ARCHITECTURAL BLUEPRINT</div>
+            <h1 class="display-text">Beyond Humanware.</h1>
+            <p class="hero-description">
+                성경 속에 비쳐진 고대 이방신들의 차가운 역사적 팩트와,<br>
+                그 뒤에 숨겨진 인간의 뜨거운 생존 욕망 및 심리적 설계를 심층적으로 해부합니다.
+            </p>
+            <div class="hero-actions">
+                <button class="ghost-btn scroll-down-btn" id="startReadingBtn">A¹ Introduction</button>
+                <button class="ghost-btn" onclick="scrollToSection('#chapters-anchors')">B¹ Chapters</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Workspace Section -->
+    <main class="main-content" id="mainContent">
+        <div class="anchors-marker" id="chapters-anchors"></div>
+        
+        <!-- Interactive Layout Row -->
+        <div class="content-layout">
+            <!-- Left Sidebar Info (Spacious layout element) -->
+            <aside class="meta-sidebar">
+                <div class="sticky-meta">
+                    <div class="meta-card">
+                        <div class="meta-label">PROJECT</div>
+                        <div class="meta-value">Idols Cleanup v2.0</div>
+                    </div>
+                    <div class="meta-card">
+                        <div class="meta-label">AUDIENCE</div>
+                        <div class="meta-value">Middle School Storytelling</div>
+                    </div>
+                    <div class="meta-card">
+                        <div class="meta-label">DESIGN SYSTEM</div>
+                        <div class="meta-value">Augen Pro Light</div>
+                    </div>
+                    <div class="meta-card progress-card">
+                        <div class="meta-label">READING PROGRESS</div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="readingProgress"></div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Reading Pane -->
+            <article class="article-pane" id="articlePane">
+                <div class="intro-placeholder" id="introPlaceholder">
+                    <div class="blueprint-grid"></div>
+                    <h2 class="section-heading">The History of Human Desire</h2>
+                    <p class="placeholder-text">
+                        상단의 메뉴를 클릭하여 챕터를 선택해 주세요.<br>
+                        고대 근동 제국의 종교 시스템과 현대 사회를 관통하는 치밀한 분석이 시작됩니다.
+                    </p>
+                </div>
+                <!-- Dynamic Content Area -->
+                <div class="markdown-render" id="markdownRender"></div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal">
+        <div class="search-modal-content">
+            <div class="search-header">
+                <input type="text" id="searchInput" placeholder="Search keywords (e.g. 바알, 드라빔, 666)..." autofocus>
+                <button class="close-search" id="closeSearch">✕</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <!-- Search results will appear here -->
+            </div>
+        </div>
+    </div>
+    <div class="modal-overlay" id="modalOverlay"></div>
+
+    <!-- Markdown Parser Marked.js -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="data.js"></script>
+    <script src="script_new.js"></script>
+</body>
+</html>
