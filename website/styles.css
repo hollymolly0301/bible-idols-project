@@ -199,9 +199,9 @@ body {
 /* Markdown Parsed Styles */
 .markdown-body h1 {
     font-family: var(--font-heading);
-    font-size: var(--text-display-sm);
-    line-height: var(--leading-display-sm);
-    letter-spacing: var(--tracking-display-sm);
+    font-size: 36px;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
     color: var(--color-midnight-ink);
     margin-bottom: var(--spacing-40);
     padding-bottom: var(--spacing-16);
@@ -210,9 +210,9 @@ body {
 
 .markdown-body h2 {
     font-family: var(--font-heading);
-    font-size: var(--text-heading-lg);
-    line-height: var(--leading-heading-lg);
-    letter-spacing: var(--tracking-heading-lg);
+    font-size: 28px;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
     margin-top: var(--spacing-64);
     margin-bottom: var(--spacing-24);
     color: var(--color-midnight-ink);
@@ -220,9 +220,9 @@ body {
 
 .markdown-body h3 {
     font-family: var(--font-heading);
-    font-size: var(--text-heading);
-    line-height: var(--leading-heading);
-    letter-spacing: var(--tracking-heading);
+    font-size: 24px;
+    line-height: 1.3;
+    letter-spacing: -0.3px;
     margin-top: var(--spacing-40);
     margin-bottom: var(--spacing-16);
     color: var(--color-ash-gray);
