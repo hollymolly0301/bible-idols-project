@@ -315,8 +315,8 @@ body {
         display: flex;
         flex-direction: row;
         overflow-x: auto;
-        gap: var(--spacing-8);
-        padding-bottom: var(--spacing-8);
+        gap: 6px;
+        padding-bottom: 6px;
         /* Hide scrollbar for a cleaner look */
         scrollbar-width: none; 
         -ms-overflow-style: none;
@@ -332,12 +332,12 @@ body {
     
     .nav-btn {
         width: auto;
-        padding: var(--spacing-8) var(--spacing-16);
+        padding: 6px 10px;
         border: 2px solid var(--color-absolute-black);
         background-color: var(--color-pure-white);
         border-radius: var(--radius-buttons);
         white-space: nowrap;
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 700;
     }
     

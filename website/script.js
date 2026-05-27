@@ -23,8 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
             
             const btn = document.createElement("button");
             btn.classList.add("nav-btn");
-            // 제목이 너무 길면 자름
-            const shortTitle = chapter.title.split(' (')[0]; 
+            // 제목을 짧게 가공 (예: "Chapter 1: 족장 시대 ~ 가나안 정착기" -> "Ch.1 족장 시대")
+            let shortTitle = chapter.title.split(' (')[0]; 
+            shortTitle = shortTitle.replace('Chapter ', 'Ch.');
+            shortTitle = shortTitle.split(' ~')[0]; // ~ 앞부분만 유지
             btn.innerText = shortTitle;
             
             btn.addEventListener("click", () => {
