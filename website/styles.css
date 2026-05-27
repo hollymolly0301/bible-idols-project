@@ -280,15 +280,76 @@ body {
 
 @media (max-width: 768px) {
     body { flex-direction: column; }
+    
+    /* Make sidebar a fixed top header with horizontal scrolling nav */
     .sidebar {
-        width: 100%; height: auto; position: relative;
-        padding: var(--spacing-24); display: none;
+        width: 100%; 
+        height: auto; 
+        position: relative;
+        padding: var(--spacing-16) var(--spacing-16) var(--spacing-8) var(--spacing-16); 
+        display: flex;
+        flex-direction: column;
         border-right: none;
         border-bottom: 4px solid var(--color-absolute-black);
+        z-index: 100;
     }
-    .sidebar.show { display: flex; }
+    
+    .sidebar-header {
+        margin-bottom: var(--spacing-16);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .sidebar-header h1 {
+        font-size: 28px;
+        margin-bottom: 0;
+    }
+    
+    .sidebar-header p {
+        font-size: 10px;
+        padding: 2px 6px;
+    }
+    
+    .nav-list {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        gap: var(--spacing-8);
+        padding-bottom: var(--spacing-8);
+        /* Hide scrollbar for a cleaner look */
+        scrollbar-width: none; 
+        -ms-overflow-style: none;
+    }
+    .nav-list::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .nav-item {
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+    
+    .nav-btn {
+        width: auto;
+        padding: var(--spacing-8) var(--spacing-16);
+        border: 2px solid var(--color-absolute-black);
+        background-color: var(--color-pure-white);
+        border-radius: var(--radius-buttons);
+        white-space: nowrap;
+        font-size: 14px;
+        font-weight: 700;
+    }
+    
+    .nav-btn.active {
+        background-color: var(--color-electric-lime);
+        border: 2px solid var(--color-absolute-black);
+    }
+
     .content-wrapper { margin-left: 0; width: 100%; padding: var(--spacing-24); }
-    .mobile-nav-toggle { display: block; }
+    
+    /* Hide the old toggle button */
+    .mobile-nav-toggle { display: none; }
     
     .article-container { 
         padding: var(--spacing-24) var(--spacing-16) var(--spacing-100) var(--spacing-16); 
